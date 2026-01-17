@@ -209,4 +209,8 @@ __marimo__/
 
 
 #Datasets
-.csv
+data-pipeline/src/df.csv
+
+*.csv
+
+
