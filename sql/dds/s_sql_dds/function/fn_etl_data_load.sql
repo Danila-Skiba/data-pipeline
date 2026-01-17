@@ -1,8 +1,7 @@
 create or replace function s_psql_dds.fn_etl_data_load(start_date date, end_date date)
 returns void as $$
 begin
-    delete from s_psql_dds.t_sql_source_structured 
-    where tpep_pickup_datetime::DATE BETWEEN start_date AND end_date and tpep_dropoff_datetime::DATE BETWEEN start_date AND end_date;
+    truncate s_psql_dds.t_sql_source_structured;
 
     insert into s_psql_dds.t_sql_source_structured (
         vendor_id, 
@@ -190,7 +189,8 @@ begin
         tpep_pickup_datetime is not null
         and vendor_id is not null
         and total_amount is not null
-        and tpep_pickup_datetime::DATE BETWEEN start_date AND end_date and tpep_pickup_datetime::DATE is not null;
+        and tpep_pickup_datetime::DATE BETWEEN start_date AND end_date and tpep_pickup_datetime::DATE is not null
+    ORDER BY  tpep_pickup_datetime;
     
     RAISE NOTICE 'ETL завершен для периода % - %', start_date, end_date;
 END;

@@ -1,6 +1,6 @@
 import pandas as pd
 import psycopg2 as ps
-from config import get_connection_string
+from src.config import get_connection_string
 
 def load_data_to_db(data:pd.DataFrame, path: str, table_name: str  = 't_sql_source_unstructured'):
     if('Unnamed: 0' in data.columns):

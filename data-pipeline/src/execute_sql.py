@@ -1,5 +1,5 @@
 import psycopg2 as ps
-from config import get_connection_string
+from src.config import get_connection_string
 
 def execute_script(path:str):
     with open(path, 'r') as f:
@@ -16,8 +16,8 @@ def execute_script(path:str):
         cursor.close()
         connect.close()
 
-def main():
-    print('wrjg')
-    execute_script("/Users/danilaskiba/git_repository/data-pipeline/sql/dds/s_sql_dds/function/fn_etl_data_load.sql")
+# def main():
+#     print('wrjg')
+#     execute_script("/Users/danilaskiba/git_repository/data-pipeline/sql/dds/s_sql_dds/function/fn_etl_data_load.sql")
 
-main()
+# main()
