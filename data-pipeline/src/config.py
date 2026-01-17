@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 
-load_dotenv(dotenv_path='/Users/danilaskiba/git_repository/data-pipeline/data-pipeline/src/passwords.env')
+load_dotenv(dotenv_path='/data-pipeline/src/passwords.env')
 
 DB_CONFIG = {
     'host': 'localhost',

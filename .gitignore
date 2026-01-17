@@ -209,8 +209,10 @@ __marimo__/
 
 
 #Datasets
-data-pipeline/src/df.csv
+data-pipeline/src/*.ipynb
 
 *.csv
+
+
 
 

@@ -3,7 +3,7 @@ from src.config import get_connection_string
 from datetime import datetime
 from src.execute_sql import execute_script
 
-PATH = '/Users/danilaskiba/git_repository/data-pipeline/sql/dds/s_sql_dds'
+PATH = '/data-pipeline/sql/dds/s_sql_dds'
 PATH_TO_DIM = f'{PATH}/table/dim_tables'
 
 def create_objects():
